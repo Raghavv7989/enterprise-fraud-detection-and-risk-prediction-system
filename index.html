@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise Fraud Detection</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Enterprise Fraud Detection Dashboard</h1>
+    <p>Risk Scoring & Transaction Intelligence</p>
+  </header>
+
+  <section class="kpi-grid">
+    <div class="kpi total">
+      <span id="total">0</span>
+      <label>Total Transactions</label>
+    </div>
+    <div class="kpi high">
+      <span id="high">0</span>
+      <label>High Risk</label>
+    </div>
+    <div class="kpi medium">
+      <span id="medium">0</span>
+      <label>Medium Risk</label>
+    </div>
+    <div class="kpi low">
+      <span id="low">0</span>
+      <label>Low Risk</label>
+    </div>
+  </section>
+
+  <section class="charts">
+    <div class="chart-card">
+      <h3>Risk Distribution</h3>
+      <canvas id="riskChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Fraud Probability by Transaction</h3>
+      <canvas id="probChart"></canvas>
+    </div>
+  </section>
+
+  <section class="table-section">
+    <h3>Transaction Risk Details</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Fraud Probability (%)</th>
+          <th>Risk Score</th>
+          <th>Risk Level</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
